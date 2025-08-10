@@ -1,5 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel'
 import ExampleCarouselImage from '../components/ExampleCarouselImage'
+import Sketch from '../sketches/Sketch'
 
 function Projects() {
   return (
@@ -30,6 +31,7 @@ function Projects() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <Sketch />
     </>
   )
 }

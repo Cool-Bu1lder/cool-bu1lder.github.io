@@ -9,7 +9,7 @@ import Projects from './pages/Projects'
 function App() {
   return (
     <>
-      <Header />
+      {/*<Header />*/}
       <Container className="py-5">
         <Routes>
           <Route index element={<Home />} />

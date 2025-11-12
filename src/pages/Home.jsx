@@ -28,8 +28,7 @@ function Home() {
             </h1>
           </div>
 
-          <p>LINKEDIN | GITHUB</p>
-
+          <p className="pt-5">LINKEDIN | GITHUB</p>
           <h2>About Me</h2>
           <p>
             I'm a Computer Science student who finds real satisfaction in

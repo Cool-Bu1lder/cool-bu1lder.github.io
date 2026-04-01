@@ -1,3 +1,5 @@
+import profile from '../assets/profile.png'
+
 import MapComponent from '../components/MapComponent'
 
 function Home() {
@@ -9,7 +11,7 @@ function Home() {
           <div className="pb-5 d-flex align-items-center justify-content-center">
             <img
               alt=""
-              src="/profile.png"
+              src={profile}
               width="64"
               height="64"
               className="rounded-circle me-3"

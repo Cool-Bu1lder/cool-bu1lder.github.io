@@ -1,14 +1,10 @@
-import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
 import MapComponent from '../components/MapComponent'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 function Home() {
   return (
     <>
       <div className="p-5 mb-4 bg-body-tertiary rounded-3">
-        <Container fluid className="p5-y">
+        <div fluid className="p5-y">
           {/* Layout of Profile inspired by GitHub */}
           <div className="pb-5 d-flex align-items-center justify-content-center">
             <img
@@ -66,7 +62,7 @@ function Home() {
             <li>map</li>
           </ul>
           <MapComponent />
-        </Container>
+        </div>
       </div>
     </>
   )

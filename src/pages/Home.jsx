@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 function Home() {
   return (
     <>
-      <div className="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div className="p-5 mb-4 rounded-3">
         <Container fluid className="p5-y">
           {/* Layout of Profile inspired by GitHub */}
           <div className="pb-5 d-flex align-items-center justify-content-center">

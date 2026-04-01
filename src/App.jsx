@@ -1,5 +1,30 @@
-function Hero({ children }) {
-  return <section className="bg-black min-h-[760px]">{children}</section>
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, RoundedBox } from '@react-three/drei'
+
+function BusinessCard() {
+  return (
+    <div className="w-full h-[760px]">
+      <Canvas camera={{ position: [0, 0, 5] }}>
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} />
+
+        <mesh rotation={[0.2, 0.5, 0]}>
+          <RoundedBox args={[6, 4, 0.1]} />
+          <meshStandardMaterial color="#ffffff" />
+        </mesh>
+
+        <OrbitControls enableZoom={false} />
+      </Canvas>
+    </div>
+  )
+}
+
+function Hero() {
+  return (
+    <section className="bg-black min-h-[760px]">
+      <BusinessCard />
+    </section>
+  )
 }
 
 function AboutMe() {

@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 import { type CollectionEntry } from 'astro:content';
 
 import { formatDate, isoDate } from '@utils/date';
@@ -10,25 +12,29 @@ interface Props {
 }
 
 const { post } = Astro.props;
+// TODO: const { data } = post;
 const href = `${base}/blog/${post.id}`;
 ---
 
 <article class="group relative -mx-4 rounded-xl px-4 py-4 transition-colors hover:bg-muted/60">
-  <div class="flex items-start justify-between gap-6">
-    <div class="min-w-0">
-      <h3 class="font-medium tracking-tight text-balance">
-        <a
-          href={href}
-          class="after:absolute after:inset-0 transition-colors group-hover:text-accent"
-        >
-          {post.data.title}
-        </a>
-      </h3>
-      <p class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
-        {post.data.description}
-      </p>
+  <div class="flex items-stretch justify-between gap-6">
+    <div class="flex flex-col justify-between min-w-0 flex-1">
+      <div>
+        <h3 class="font-medium tracking-tight text-balance">
+          <a
+            href={href}
+            class="after:absolute after:inset-0 transition-colors group-hover:text-accent"
+          >
+            {post.data.title}
+          </a>
+        </h3>
+        <p class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+          {post.data.description}
+        </p>
+      </div>
+
       {post.data.tags.length > 0 && (
-        <div class="relative z-10 mt-3 flex flex-wrap gap-1.5">
+        <div class="relative z-10 mt-auto flex flex-wrap gap-1.5">
           {post.data.tags.slice(0, 4).map((tag) => (
             <div class="rounded-md bg-muted px-2 py-0.5 font-mono text-[0.6875rem] text-muted-foreground">
               {tag}
@@ -37,8 +43,16 @@ const href = `${base}/blog/${post.id}`;
         </div>
       )}
     </div>
-    <div class="shrink-0 text-right text-xs text-muted-foreground">
-      <time datetime={isoDate(post.data.publishedAt)} class="block">
+
+    <div class="flex flex-col justify-between items-end text-right text-xs text-muted-foreground">
+      {post.data.image && (
+        <Image
+          src={post.data.image}
+          alt=""
+          class="w-auto max-h-20 rounded-xl object-cover aspect-square"
+        />
+      )}
+      <time datetime={isoDate(post.data.publishedAt)} class="block mt-1.5 py-0.5">
         {formatDate(post.data.publishedAt)}
       </time>
     </div>

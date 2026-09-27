@@ -5,7 +5,7 @@
 - show off p5.js projects
 - have a share my website button?
 - auto play on hover / viewport view
-- improve blogs card
+- ~~improve blogs card~~
 - ~~improve footer~~
 - check code todos
 - ~~structure social links in collapse like navlinks~~

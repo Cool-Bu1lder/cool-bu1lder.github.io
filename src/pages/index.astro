@@ -74,7 +74,7 @@ const description = 'Software developer building websites and games.';
 
     {/* ----------------------- Latest articles -------------------------- */}
     <Section title="Latest articles" href={`${base}/blog`}>
-      <div class="flex flex-col">
+      <div class="flex flex-col gap-y-8">
         {posts.map((post) => (
           <ArticleCard post={post} />
         ))}

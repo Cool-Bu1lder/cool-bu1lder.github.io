@@ -18,3 +18,4 @@
 - article card hover
 - ~~theme blog epxressive code~~
 - compare nav bar hover to youtube
+- cyberware planner

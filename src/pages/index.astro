@@ -8,6 +8,7 @@ import ProjectCard from '@components/ProjectCard.astro';
 import ArticleCard from '@components/ArticleCard.astro';
 
 import ProfileIcon from '@assets/profile.svg';
+import OgIcon from '@assets/og.png';
 
 import { FULL_NAME, ROLE, LOCATION, EMAIL } from '@utils/globals';
 
@@ -33,7 +34,7 @@ const title = `${FULL_NAME} - ${ROLE}`;
 const description = 'Portfolio website featuring my projects and blogs.';
 ---
 
-<BaseLayout title={title} description={description} image={ProfileIcon}>
+<BaseLayout title={title} description={description} image={OgIcon}>
   <div class="mx-auto w-full max-w-3xl px-5 sm:px-6">
     {/* ------------------------------ Hero ------------------------------ */}
     <section class="pt-14 sm:pt-20">

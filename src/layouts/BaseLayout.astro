@@ -7,7 +7,7 @@ import Footer from '@components/Footer.astro';
 import { FULL_NAME, ROLE } from '@utils/globals';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 interface Props {
   title: string;

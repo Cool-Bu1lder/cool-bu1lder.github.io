@@ -14,7 +14,7 @@ export const SOCIAL_LINKS = [
   { name: 'GitHub', href: GITHUB, icon: GitHubIcon },
   { name: 'LinkedIn', href: LINKEDIN, icon: LinkedInIcon },
 ];
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 export const NAV_LINKS = [
   { label: 'Home', href: `${base}/` },
   { label: 'Projects', href: `${base}/projects` },

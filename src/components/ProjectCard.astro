@@ -4,7 +4,7 @@ import { type CollectionEntry } from 'astro:content';
 import GitHubIcon from '@assets/icons/github.svg';
 import ExternalLinkIcon from '@assets/icons/external-link.svg';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 interface Props {
   project: CollectionEntry<'projects'>;

@@ -16,7 +16,7 @@ import Tabs from '@components/Tabs.astro';
 
 import { FULL_NAME } from '@utils/globals';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export const getStaticPaths = (async () => {
   const posts = await getCollection('blog');

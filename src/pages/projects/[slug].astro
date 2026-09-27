@@ -12,7 +12,7 @@ import Button from '@components/Button.astro';
 import Callout from '@components/Callout.astro';
 import Tabs from '@components/Tabs.astro';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export const getStaticPaths = (async () => {
   const projects = await getCollection('projects');

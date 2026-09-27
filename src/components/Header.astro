@@ -3,7 +3,7 @@ import ProfileIcon from '@assets/profile.svg';
 import MenuIcon from '@assets/icons/menu.svg';
 import CloseIcon from '@assets/icons/x.svg';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 

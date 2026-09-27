@@ -5,7 +5,7 @@ import { type CollectionEntry } from 'astro:content';
 
 import { formatDate, isoDate } from '@utils/date';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 interface Props {
   post: CollectionEntry<'blog'>;

@@ -17,13 +17,7 @@ const href = `${base}/projects/${project.id}`;
 ---
 
 <article class="group relative flex flex-col transition-all duration-300 ease-out rounded-xl hover:-m-3 hover:p-3 hover:bg-muted/60">
-  <video
-    loop
-    muted
-    playsinline
-    preload="auto"
-    class="rounded-xl aspect-video w-full object-cover bg-muted-foreground"
-  >
+  <video loop muted playsinline class="rounded-xl aspect-video w-full object-cover bg-muted">
     <source src={`${base}/${data.video}`} type="video/mp4" />
     Your browser does not support the video tag.
   </video>

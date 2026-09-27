@@ -4,7 +4,7 @@
 - ragebait by writing an article on why my dogs are the best dogs
 - show off p5.js projects
 - have a share my website button?
-- auto play on hover / viewport view
+- ~~auto play on hover / viewport view~~
 - ~~improve blogs card~~
 - ~~improve footer~~
 - check code todos

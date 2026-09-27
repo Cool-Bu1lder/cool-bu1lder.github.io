@@ -13,8 +13,8 @@ interface Props {
 
 const { project } = Astro.props;
 const { data } = project;
-const href = `${base}projects/${project.id}`;
-const src = `${base}${data.video}`;
+const href = `${base}/projects/${project.id}`;
+const src = `${base}${base != '' ? '/' : ''}${data.video}`; // TODO: annoying to read but works
 
 // TODO: use poster attribute on video tag for image thumbnail
 ---

@@ -11,7 +11,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://cool-bu1lder.github.io',
-  // base: '/portfolio-prototype',
+  base: '/',
   integrations: [
     preact(),
     expressiveCode({

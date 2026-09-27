@@ -9,9 +9,8 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 // TODO: use a nav link component?
 function isActive(href: string): boolean {
-  const target = href.replace(/\/$/, '') || base;
-  if (href === base) return pathname === target;
-  return pathname === target || pathname.startsWith(`${base}/${target}/`);
+  const cleanHref = href.replace(/\/$/, '') || '/';
+  return pathname === cleanHref;
 }
 
 import { SITE_NAME, NAV_LINKS, SOCIAL_LINKS } from '@utils/globals';

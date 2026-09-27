@@ -25,13 +25,15 @@ export const getStaticPaths = (async () => {
 const { project } = Astro.props;
 const { Content } = await render(project);
 const { title, description, technologies, year, demo, github, image, video } = project.data; // TODO: const { data } = project;
+
+const src = `${base}${base != '' ? '/' : ''}${video}`; // TODO: annoying to read but works
 ---
 
 <BaseLayout title={title} description={description} image={image}>
   <div class="mx-auto w-full max-w-3xl px-5 sm:px-6 py-10 sm:py-14">
     <header>
       <video autoplay loop muted playsinline class="rounded-xl aspect-video w-full object-cover">
-        <source src={`${base}/${video}`} type="video/mp4" />
+        <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
